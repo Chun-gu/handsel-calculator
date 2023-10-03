@@ -12,13 +12,6 @@ export default function NavBar() {
             )}
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/deposit">
-            {({ isActive }) => (
-              <PathName $isActive={isActive}>떼인 돈 계산기</PathName>
-            )}
-          </NavLink>
-        </li>
       </PathList>
     </nav>
   );
