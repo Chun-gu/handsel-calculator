@@ -11,7 +11,8 @@ const slate = {
   slate10: '#80838d',
   slate11: '#60646c',
   slate12: '#1c2024',
-};
+} as const;
+
 const red = {
   red1: '#fffcfc',
   red2: '#fff7f7',
@@ -25,7 +26,8 @@ const red = {
   red10: '#dc3e42',
   red11: '#ce2c31',
   red12: '#641723',
-};
+} as const;
+
 const yellow = {
   yellow1: '#fdfdf9',
   yellow2: '#fefce9',
@@ -39,7 +41,8 @@ const yellow = {
   yellow10: '#ffdc00',
   yellow11: '#9e6c00',
   yellow12: '#473b1f',
-};
+} as const;
+
 const green = {
   green1: '#fbfefc',
   green2: '#f4fbf6',
@@ -53,7 +56,8 @@ const green = {
   green10: '#2b9a66',
   green11: '#218358',
   green12: '#193b2d',
-};
+} as const;
+
 const blue = {
   blue1: '#fbfdff',
   blue2: '#f4faff',
@@ -67,7 +71,7 @@ const blue = {
   blue10: '#0588f0',
   blue11: '#0d74ce',
   blue12: '#113264',
-};
+} as const;
 
 const color = {
   ...slate,
@@ -75,6 +79,6 @@ const color = {
   ...yellow,
   ...green,
   ...blue,
-} as const;
+};
 
 export default color;
