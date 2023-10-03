@@ -1,9 +1,15 @@
 import { styled } from 'styled-components';
 
-export default function ResultDisplay() {
+type Props = {
+  result: number | string;
+};
+
+export default function ResultDisplay({ result }: Props) {
   return (
     <Container>
-      <span>9,999,999,999</span>
+      <span>
+        {typeof result === 'string' ? result : result.toLocaleString()}
+      </span>
     </Container>
   );
 }

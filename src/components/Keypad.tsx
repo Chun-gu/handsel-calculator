@@ -1,24 +1,30 @@
 import { styled } from 'styled-components';
 
-export default function Keypad() {
+import Key from './Key';
+
+type Props = {
+  onClickKey: (e: React.MouseEvent<HTMLButtonElement>) => void;
+};
+
+export default function Keypad({ onClickKey }: Props) {
   return (
     <Grid>
-      <Number>1</Number>
-      <Number>2</Number>
-      <Number>3</Number>
-      <Operator>+</Operator>
-      <Number>4</Number>
-      <Number>5</Number>
-      <Number>6</Number>
-      <Operator>*</Operator>
-      <Number>7</Number>
-      <Number>8</Number>
-      <Number>9</Number>
-      <Operator>/</Operator>
-      <Clear>AC</Clear>
-      <Clear>C</Clear>
-      <Number>0</Number>
-      <Operator>=</Operator>
+      <Key value={'1'} onClickKey={onClickKey} />
+      <Key value={'2'} onClickKey={onClickKey} />
+      <Key value={'3'} onClickKey={onClickKey} />
+      <Key value={'+'} onClickKey={onClickKey} />
+      <Key value={'4'} onClickKey={onClickKey} />
+      <Key value={'5'} onClickKey={onClickKey} />
+      <Key value={'6'} onClickKey={onClickKey} />
+      <Key value={'*'} onClickKey={onClickKey} />
+      <Key value={'7'} onClickKey={onClickKey} />
+      <Key value={'8'} onClickKey={onClickKey} />
+      <Key value={'9'} onClickKey={onClickKey} />
+      <Key value={'/'} onClickKey={onClickKey} />
+      <Key value={'AC'} onClickKey={onClickKey} />
+      <Key value={'C'} onClickKey={onClickKey} />
+      <Key value={'0'} onClickKey={onClickKey} />
+      <Key value={'='} onClickKey={onClickKey} />
     </Grid>
   );
 }
@@ -31,25 +37,4 @@ const Grid = styled.div`
   aspect-ratio: 1/1;
   width: 100%;
   max-width: 280px;
-`;
-
-const Number = styled.button`
-  background-color: ${({ theme }) => theme.color.slate3};
-  &:hover {
-    background-color: ${({ theme }) => theme.color.slate5};
-  }
-`;
-
-const Operator = styled.button`
-  background-color: ${({ theme }) => theme.color.yellow5};
-  &:hover {
-    background-color: ${({ theme }) => theme.color.yellow7};
-  }
-`;
-
-const Clear = styled.button`
-  background-color: ${({ theme }) => theme.color.red5};
-  &:hover {
-    background-color: ${({ theme }) => theme.color.red7};
-  }
 `;
