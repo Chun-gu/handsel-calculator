@@ -1,96 +1,18 @@
 import { styled } from 'styled-components';
 
-export default function InputDisplay() {
+type Props = {
+  inputs: string[];
+};
+
+export default function InputDisplay({ inputs }: Props) {
   return (
     <Container>
       <ul>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
-        <li>
-          <Input type="text" value={203} />
-        </li>
+        {inputs.map((input, index) => (
+          <li key={`${input}-${index}`}>
+            <Input defaultValue={input} />
+          </li>
+        ))}
       </ul>
     </Container>
   );
