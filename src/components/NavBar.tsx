@@ -8,14 +8,14 @@ export default function NavBar() {
         <li>
           <NavLink to="/">
             {({ isActive }) => (
-              <PathName isActive={isActive}>세뱃돈 계산기</PathName>
+              <PathName $isActive={isActive}>세뱃돈 계산기</PathName>
             )}
           </NavLink>
         </li>
         <li>
           <NavLink to="/deposit">
             {({ isActive }) => (
-              <PathName isActive={isActive}>떼인 돈 계산기</PathName>
+              <PathName $isActive={isActive}>떼인 돈 계산기</PathName>
             )}
           </NavLink>
         </li>
@@ -29,7 +29,7 @@ const PathList = styled.ul`
   justify-content: space-around;
 `;
 
-const PathName = styled.span<{ isActive: boolean }>`
-  color: ${({ isActive, theme }) =>
-    isActive ? theme.color.red10 : theme.color.slate12};
+const PathName = styled.span<{ $isActive: boolean }>`
+  color: ${({ $isActive, theme }) =>
+    $isActive ? theme.color.red10 : theme.color.slate12};
 `;
